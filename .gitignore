@@ -1,0 +1,9 @@
+.phpunit.result.cache
+composer.lock
+symfony.lock
+.php_cs.cache
+.php_cs
+vendor/
+.idea/*
+Icon[^M]
+docker-compose.override.yml
