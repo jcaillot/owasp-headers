@@ -2,21 +2,17 @@
 
 namespace Tests\Chaman\Middleware;
 
-use PHPUnit\Framework\TestCase;
-
-use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
-use Symfony\Component\HttpFoundation\ResponseHeaderBag;
-
+use Chaman\Http\Middleware\OwaspHeaders;
+use Illuminate\Config\Repository as ConfigRepository;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Config\Repository as ConfigRepository;
-
-use Chaman\Http\Middleware\OwaspHeaders;
+use PHPUnit\Framework\TestCase;
+use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
+use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 
 // php vendor/bin/phpunit tests/Http/Middleware/OwaspHeadersTest.php
 class OwaspHeadersTest extends TestCase
 {
-
     public function testHeadersAreAdded()
     {
         $request = new Request;
@@ -44,12 +40,9 @@ class OwaspHeadersTest extends TestCase
         /** @var ResponseHeaderBag $headers */
         $headers = $response->headers;
         $this->assertInstanceOf(ResponseHeaderBag::class, $headers);
-
         $this->assertIsArray($headers->all());
         $this->assertTrue($headers->has('x-header-a'));
         $this->assertFalse($headers->has('Content-Type'));
         $this->assertSame($headers->get('X-Content-Type-Option'), 'nosniff');
     }
-
 }
-
