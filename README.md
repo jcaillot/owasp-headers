@@ -63,7 +63,7 @@ in `app/Kernel.php`, you can declare the middleware globally. All responses will
 ```php
     protected $middleware = [
          ...
-         \App\Http\Middleware\OwaspHeaders::class,
+         \Chaman\Http\Middleware\OwaspHeaders::class,
          
         ];
 ```
@@ -73,12 +73,12 @@ alternatively, you can declare it as a route middleware and associate it on a ro
 ```php
         protected routeMiddleware = [
              ...
-            'owasp.headers' => \App\Http\Middleware\OwaspHeaders::class,
+            'owasp.headers' => \Chaman\Http\Middleware\OwaspHeaders::class,
         
         ];
 ```
 
-And apply it later on (in `routes/web.php`):
+And apply it later on on any route (in `routes/web.php`):
 
 ```php
     Route::get('/home', function () {
