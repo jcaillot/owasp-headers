@@ -27,7 +27,7 @@ in your app config directory:
 
 ```
 
-Do not hesitate to edit your version of `./config/owasp-headers-php` in order to fine-tune the OWASP recommended
+Do not hesitate to edit your version of `./config/owasp-headers.php` in order to fine-tune the OWASP recommended
 headers. Here is the default list of headers that will be added to the response:
 
 ```php
