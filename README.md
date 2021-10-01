@@ -91,7 +91,7 @@ And apply it later on on any route (in `routes/web.php`):
 
 More infos on OWASP recommended headers can be found on the OWASP Secure Headers Project Wiki:
 
-[OWASP](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project#tab=Headers)
+[OWASP](https://owasp.org/www-project-secure-headers/)
 
 ## License
 

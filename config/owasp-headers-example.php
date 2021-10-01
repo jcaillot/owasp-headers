@@ -1,7 +1,7 @@
 <?php
 // installed by the package jcaillot/owasp-headers
 // for a complete description of recommended headers
-// see https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project#tab=Headers
+// see https://owasp.org/www-project-secure-headers/
 
 return [
 
