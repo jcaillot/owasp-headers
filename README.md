@@ -28,7 +28,8 @@ in your app config directory:
 ```
 
 Do not hesitate to edit your version of `./config/owasp-headers.php` in order to fine-tune the OWASP recommended
-headers. Here is the default list of headers that will be added to the response:
+headers. CAUTION: Headers like: HTTP Strict Transport Security (HSTS) and Content Security Policy (CSP) need a special
+attention in order not to cause any incident. Here is the default list of headers that will be added to the response:
 
 ```php
     return [
