@@ -7,7 +7,7 @@ namespace Chaman\Http\Middleware;
 use Closure;
 use Illuminate\Config\Repository as ConfigRepository;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Symfony\Component\HttpFoundation\Response;
 
 class OwaspHeaders
 {
@@ -32,7 +32,7 @@ class OwaspHeaders
      */
     public function handle(Request $request, Closure $next): Response
     {
-        /** @var Response extends Symfony\Component\HttpFoundation\Response */
+        /** @var Response */
         $response = $next($request);
 
         if ($request->ajax()) {
